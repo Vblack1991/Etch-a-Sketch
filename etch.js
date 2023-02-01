@@ -8,13 +8,15 @@ let row = document.createElement('div');
 row.setAttribute('class', 'row');
 container.appendChild(row);
 
-function hEffect() {
+//changes color when entering/leaving divs
+function hoverStart() {
     row.setAttribute('style', 'background-color: red;');
 }
+row.addEventListener('mouseover', hoverStart);
 
-row.addEventListener('mouseover', hEffect, true);
+function hoverEnd() {
+    row.setAttribute('style', 'background-color: blue;');
 }
-
-//hover effect that changes divs color
-
+row.addEventListener('mouseout', hoverEnd);
+};
 
